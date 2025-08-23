@@ -41,11 +41,12 @@ export default function Home() {
 			const y = element.getBoundingClientRect().top + window.pageYOffset - navHeight;
 			window.scrollTo({ top: y, behavior: "smooth" });
 		}
+		setMenuOpen(false);
 	};
 
 	return (
 		<div className="flex flex-col">
-			<nav className={`fixed top-0 left-0 w-full transition-colors duration-300 ${scrolled ? "bg-white shadow-md" : "bg-none"}`}>
+			<nav className={`fixed top-0 left-0 w-full transition-colors duration-300 ${scrolled ? "bg-white shadow-md" : "bg-transparent"} z-50`}>
 				<div className="max-w-[90%] mx-auto px-4 py-2 hidden md:flex justify-between items-center">
 					<Image
 						src="/img/logo-nav.png"
@@ -80,7 +81,7 @@ export default function Home() {
 									key={section}
 									href={`#${section}`}
 									onClick={handleNavClick(section)}
-									className="text-[1.5rem] font-bold hover:text-rose-500"
+									className="text-[1.5rem] font-bold px-4 text-center py-2 rounded-md hover:bg-rose-500 hover:text-white"
 								>
 									{section.charAt(0).toUpperCase() + section.slice(1)}
 								</a>
@@ -88,8 +89,10 @@ export default function Home() {
 						)}
 						<button
 							onClick={() => setMenuOpen(!menuOpen)}
-							className="bg-gray-200 text-gray-800 py-2 px-8 rounded-sm hover:bg-gray-400 uppercase font-bold shadow-lg"
-						>Cerrar</button>
+							className="mt-auto bg-gray-200 text-gray-800 py-2 px-8 rounded-sm hover:bg-gray-400 uppercase font-bold shadow-lg"
+						>
+							Cerrar
+						</button>
 					</div>
 				)}
 			</nav>
