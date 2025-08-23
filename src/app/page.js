@@ -569,7 +569,7 @@ export default function Home() {
 				<section id="contacto" className="flex flex-col w-full mx-auto py-[150px] bg-gray-950 p-4">
 					<div className="text-center text-white">
 						<h2 className="text-[2.5rem] font-bold">Conoce nuestro servicio de transporte</h2>
-						<h2 className="hidden md:flex text-[2rem] font-bold">mercancias y productos</h2>
+						<h2 className="text-[1.5rem] md:text-[2rem] font-bold">mercancias y productos</h2>
 					</div>
 					<div className="flex flex-col justify-center items-center md:flex-row md:items-center md:justify-center gap-4 mt-12">
 						<input
