@@ -4,6 +4,7 @@ import { Roboto } from "next/font/google";
 
 
 import "./globals.css";
+import Head from "next/head";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -30,6 +31,20 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="es" className={`${roboto.className}`}>
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Transportes Danfer",
+              "url": "https://www.transportesdanfer.com",
+              "logo": "https://www.transportesdanfer.com/logo.png"
+            })
+          }}
+        />
+      </Head>
       <body>
         {children}
       </body>

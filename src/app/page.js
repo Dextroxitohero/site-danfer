@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import 'animate.css';
+import Head from "next/head";
 
 export default function Home() {
 
@@ -46,6 +47,13 @@ export default function Home() {
 
 	return (
 		<div className="flex flex-col">
+			<Head>
+				<title>Transportes Danfer | Transporte confiable en México</title>
+				<meta name="description" content="Ofrecemos soluciones de transporte confiables y seguras para todo tipo de mercancías en México." />
+				<meta name="keywords" content="transporte, logística, paquetería, envíos, México" />
+				<meta name="author" content="Transportes Danfer" />
+				<link rel="canonical" href="https://www.transportesdanfer.com/" />
+			</Head>
 			<nav className={`fixed top-0 left-0 w-full transition-colors duration-300 ${scrolled ? "bg-white shadow-md" : "bg-transparent"} z-50`}>
 				<div className="max-w-[90%] mx-auto px-4 py-2 hidden md:flex justify-between items-center">
 					<Image
