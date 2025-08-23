@@ -24,15 +24,25 @@ export default function Home() {
 
 
 	// Función para scroll suave
+	// const handleNavClick = (id) => (e) => {
+	// 	e.preventDefault();
+	// 	const element = document.getElementById(id);
+	// 	if (element) {
+	// 		element.scrollIntoView({ behavior: "smooth", block: "start" });
+	// 	}
+	// 	setMenuOpen(false);
+	// };
+
 	const handleNavClick = (id) => (e) => {
 		e.preventDefault();
 		const element = document.getElementById(id);
 		if (element) {
-			element.scrollIntoView({ behavior: "smooth", block: "start" });
+			const navHeight = 100; // altura de tu nav
+			const y = element.getBoundingClientRect().top + window.pageYOffset - navHeight;
+			window.scrollTo({ top: y, behavior: "smooth" });
 		}
-		setMenuOpen(false);
 	};
-	
+
 	return (
 		<div className="flex flex-col">
 			<nav className={`fixed top-0 left-0 w-full transition-colors duration-300 ${scrolled ? "bg-white shadow-md" : "bg-none"}`}>
@@ -63,7 +73,7 @@ export default function Home() {
 				</div>
 				{/* Menú Móvil */}
 				{menuOpen && (
-					<div className="md:hidden fixed top-0 right-0 w-3/4 h-full bg-white shadow-lg z-40 flex flex-col p-8 space-y-6">
+					<div className="md:hidden fixed top-0 right-0 w-3/4 h-full bg-white shadow-lg flex flex-col p-8 space-y-6 z-50">
 						{["inicio", "servicios", "beneficios", "nosotros", "operacion", "contacto"].map(
 							(section) => (
 								<a
@@ -99,7 +109,10 @@ export default function Home() {
 						<h1 className="text-5xl font-extrabold animate__animated animate__fadeInLeft">en todo México</h1>
 						<h1 className="mt-6 text-[1.1rem] animate__animated animate__fadeIn">En <span className="text-rose-500 font-extrabold animate__animated animate__fadeIn">Transportes Danfer</span>, conectamos cada rincón de México con soluciones de transporte confiables y a la medida de tus necesidades. Contamos con servicio público federal, así como servicio exprés local y foráneo a nivel nacional, garantizando seguridad, calidad y puntualidad en cada envío. Nuestra cobertura nacional, junto con una atención personalizada y un compromiso absoluto con la eficiencia, nos permite ser tu aliado estratégico en logística y transporte. Tu carga siempre llegará a tiempo, sin importar el destino.</h1>
 						<div className="mt-6 animate__animated animate__fadeInUp">
-							<button className="bg-rose-500 text-white py-2 px-8 rounded-full hover:bg-rose-800 uppercase font-bold">contactanos hoy</button>
+							<button
+								className="bg-rose-500 text-white py-2 px-8 rounded-full hover:bg-rose-800 uppercase font-bold"
+								onClick={handleNavClick("contacto")}
+							>contactanos hoy</button>
 						</div>
 					</div>
 					<div className="w-[90%] flex md:hidden flex-col gap-2">
@@ -122,7 +135,10 @@ export default function Home() {
 						<h1 className="text-[1.5rem] font-extrabold text-center animate__animated animate__fadeIn">Tu aliado logístico <span className="text-rose-500 animate__animated animate__fadeIn">transporte confiable</span> en todo México </h1>
 						<h1 className="mt-6 text-center text-[1rem] animate__animated animate__fadeIn">En <span className="text-rose-500 font-extrabold">Transportes Danfer</span>, conectamos cada rincón de México con soluciones de transporte confiables y a la medida de tus necesidades. Contamos con servicio público federal, así como servicio exprés local y foráneo a nivel nacional, garantizando seguridad, calidad y puntualidad en cada envío. Nuestra cobertura nacional, junto con una atención personalizada y un compromiso absoluto con la eficiencia, nos permite ser tu aliado estratégico en logística y transporte. Tu carga siempre llegará a tiempo, sin importar el destino.</h1>
 						<div className="mt-6 flex justify-center items-center animate__animated animate__fadeInUp">
-							<button className="bg-rose-500 text-white py-2 px-8 rounded-full hover:bg-rose-800 uppercase font-bold shadow-lg">contactanos hoy</button>
+							<button
+								className="bg-rose-500 text-white py-2 px-8 rounded-full hover:bg-rose-800 uppercase font-bold shadow-lg"
+								onClick={handleNavClick("contacto")}
+							>contactanos hoy</button>
 						</div>
 					</div>
 				</div>
@@ -550,7 +566,7 @@ export default function Home() {
 				<section id="contacto" className="flex flex-col w-full mx-auto py-[150px] bg-gray-950 p-4">
 					<div className="text-center text-white">
 						<h2 className="text-[2.5rem] font-bold">Conoce nuestro servicio de transporte</h2>
-						<h2 className="text-[2rem] font-bold">mercancias y productos</h2>
+						<h2 className="hidden md:flex text-[2rem] font-bold">mercancias y productos</h2>
 					</div>
 					<div className="flex flex-col justify-center items-center md:flex-row md:items-center md:justify-center gap-4 mt-12">
 						<input
