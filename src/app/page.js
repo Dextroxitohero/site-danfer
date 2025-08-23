@@ -204,8 +204,8 @@ export default function Home() {
 								className="rounded-lg mb-4 shadow-lg w-auto h-auto animate__animated animate__fadeIn"
 							/>
 							<div className="flex flex-col w-full justify-center items-center">
-								<h3 className="text-2xl font-bold mt-4 text-center">Servicios de paquetería pesada</h3>
-								<h4 className="text-xl mt-2 text-center">Transporte confiable para cargas voluminosas y pesadas en todo México.</h4>
+								<h3 className="text-2xl font-bold mt-4 text-center">Envíos exprés</h3>
+								<h4 className="text-xl mt-2 text-center">Entregas rápidas y seguras que llegan justo cuando las necesitas.</h4>
 							</div>
 						</div>
 						<div className="w-full flex flex-col justify-center items-center py-12">
