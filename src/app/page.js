@@ -266,14 +266,14 @@ export default function Home() {
 
 							<div className="w-[90%] p-8">
 								<div className="flex flex-col justify-center items-center">
-									<div className="w-[150px] h-[150px]">
+									<div className="flex justify-center items-center">
 										<Image
 											src="/img/beneficios-icon-1.png"
 											alt="Danfer"
 											width={300}
 											height={200}
 											objectFit="cover"
-											className="w-auto h-auto p-4"
+											className=" w-[125px] h-auto p-4"
 										/>
 									</div>
 									<div className="w-full flex flex-col justify-center items-center gap-4 mt-4">
@@ -285,14 +285,14 @@ export default function Home() {
 
 							<div className="w-[90%] p-8">
 								<div className="flex flex-col justify-center items-center">
-									<div className="w-[150px] h-[150px]">
+									<div>
 										<Image
 											src="/img/beneficios-icon-2.png"
 											alt="Danfer"
 											width={300}
 											height={200}
 											objectFit="cover"
-											className="w-auto h-auto p-4"
+											className="w-[125px] h-auto p-4"
 										/>
 									</div>
 									<div className="w-full flex flex-col justify-center items-center gap-4 mt-4">
@@ -304,14 +304,14 @@ export default function Home() {
 
 							<div className="w-[90%] p-8">
 								<div className="flex flex-col justify-center items-center">
-									<div className="w-[150px] h-[150px]">
+									<div>
 										<Image
 											src="/img/beneficios-icon-3.png"
 											alt="Danfer"
 											width={300}
 											height={200}
 											objectFit="cover"
-											className="w-auto h-auto p-4"
+											className="w-[125px] h-auto p-4"
 										/>
 									</div>
 									<div className="w-full flex flex-col justify-center items-center gap-4 mt-4">
@@ -323,14 +323,14 @@ export default function Home() {
 
 							<div className="w-[90%] p-8">
 								<div className="flex flex-col justify-center items-center">
-									<div className="w-[150px] h-[150px]">
+									<div>
 										<Image
 											src="/img/beneficios-icon-4.png"
 											alt="Danfer"
 											width={300}
 											height={200}
 											objectFit="cover"
-											className="w-auto h-auto p-4"
+											className="w-[125] h-auto p-4"
 										/>
 									</div>
 									<div className="w-full flex flex-col justify-center items-center gap-4 mt-4">
@@ -484,11 +484,11 @@ export default function Home() {
 				<section id="operacion" className="flex flex-col w-[90%] mx-auto my-10">
 					<div className="text-center">
 						<h1 className="text-[2.5rem] font-bold mb-6">Operación</h1>
-						<h2 className="text-[1.5rem] font-bold text-center">Nuestro equipo gestiona cada operación con excelencia, asegurando envíos confiables y atención personalizada al cliente</h2>
-						<h2 className="text-[1.5rem] font-bold text-center mt-2">Logística confiable y eficiente que asegura cada entrega puntual</h2>
+						<h2 className="text-[1.2rem] font-bold text-center">Nuestro equipo gestiona cada operación con excelencia, asegurando envíos confiables y atención personalizada al cliente</h2>
+						<h2 className="text-[1.1rem] font-bold text-center mt-2">Logística confiable y eficiente que asegura cada entrega puntual</h2>
 					</div>
 
-					<div className="w-full grid grid-cols-1 md:grid-cols-3 gap-4 p-4 mt-16">
+					<div className="w-full grid grid-cols-1 md:grid-cols-3 gap-4 py-20 px-8">
 
 						<div className="w-full flex flex-col justify-center items-center">
 							<Image
@@ -497,7 +497,7 @@ export default function Home() {
 								width={300}
 								height={200}
 								objectFit="cover"
-								className="w-auto h-auto p-2"
+								className="w-[100px] h-auto p-2"
 							/>
 							<div className="flex flex-col w-full justify-center items-center py-2 px-2 md:px-16">
 								<h3 className="text-center text-[1.1rem] font-bold mt-4">Recolección</h3>
@@ -512,7 +512,7 @@ export default function Home() {
 								width={300}
 								height={200}
 								objectFit="cover"
-								className="w-auto h-auto p-2"
+								className="w-[100px] h-auto p-2"
 							/>
 							<div className="flex flex-col w-full justify-center items-center py-2 px-2 md:px-16">
 								<h3 className="text-center text-[1.1rem] font-bold mt-4">Rastreo en tiempo real</h3>
@@ -527,7 +527,7 @@ export default function Home() {
 								width={300}
 								height={200}
 								objectFit="cover"
-								className="w-auto h-auto p-2"
+								className="w-[100px] h-auto p-2"
 							/>
 							<div className="flex flex-col w-full justify-center items-center py-2 px-2 md:px-16">
 								<h3 className="text-center text-[1.1rem] font-bold mt-4">Proceso de entrega</h3>
