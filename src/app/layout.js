@@ -1,12 +1,19 @@
 // import { Geist, Geist_Mono } from "next/font/google";
 
-import { Roboto } from "next/font/google";
+import { Montserrat } from "next/font/google";
 
 
 import "./globals.css";
 import Head from "next/head";
 
-const roboto = Roboto({
+// const roboto = Roboto({
+//   subsets: ["latin"],
+//   weight: ["100", "300", "400", "500", "700", "900"], // todos los pesos
+//   style: ["normal", "italic"], // opcional, si quieres cursivas
+//   variable: "--font-roboto",   // se usa como CSS variable para Tailwind
+// });
+
+const montserrat = Montserrat({
   subsets: ["latin"],
   weight: ["100", "300", "400", "500", "700", "900"], // todos los pesos
   style: ["normal", "italic"], // opcional, si quieres cursivas
@@ -30,17 +37,17 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="es" className={`${roboto.className}`}>
+    <html lang="es" className={`${montserrat.variable}`}>
       <Head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "Organization",
+              "@type": "Company Delivery",
               "name": "Transportes Danfer",
               "url": "https://www.transportesdanfer.com",
-              "logo": "https://www.transportesdanfer.com/logo.png"
+              "logo": "https://www.transportesdanfer.com/img/logo-union.png"
             })
           }}
         />

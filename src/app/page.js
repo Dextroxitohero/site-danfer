@@ -23,17 +23,6 @@ export default function Home() {
 		return () => window.removeEventListener("scroll", handleScroll);
 	}, []);
 
-
-	// Función para scroll suave
-	// const handleNavClick = (id) => (e) => {
-	// 	e.preventDefault();
-	// 	const element = document.getElementById(id);
-	// 	if (element) {
-	// 		element.scrollIntoView({ behavior: "smooth", block: "start" });
-	// 	}
-	// 	setMenuOpen(false);
-	// };
-
 	const handleNavClick = (id) => (e) => {
 		e.preventDefault();
 		const element = document.getElementById(id);
@@ -46,7 +35,7 @@ export default function Home() {
 	};
 
 	return (
-		<div className="flex flex-col max-w-[2560px] mx-auto">
+		<div className="flex flex-col max-w-[2560px] mx-auto font-montserrat">
 			<Head>
 				<title>Transportes Danfer | Transporte confiable en México</title>
 				<meta name="description" content="Ofrecemos soluciones de transporte confiables y seguras para todo tipo de mercancías en México." />
@@ -55,23 +44,23 @@ export default function Home() {
 				<link rel="canonical" href="https://www.transportesdanfer.com/" />
 			</Head>
 			<nav className={`fixed top-0 left-0 w-full transition-colors duration-300 ${scrolled ? "bg-white shadow-md" : "bg-transparent"} z-50`}>
-				<div className="max-w-[2560px] w-[90%] mx-auto px-4 py-2 hidden md:flex justify-between items-center">
+				<div className="max-w-[2560px] w-[95%] mx-auto px-4 py-2 hidden md:flex justify-between items-center">
 					<Image
 						src="/img/logo-nav.png"
 						alt="Danfer"
 						width={300}
 						height={200}
 						objectFit="cover"
-						className="w-[400px] h-auto"
+						className="w-[350px] h-auto"
 					/>
-					<ul className="flex space-x-4">
+					<ul className="flex space-x-1">
 						{["inicio", "servicios", "beneficios", "nosotros", "operacion", "contacto"].map(
 							(section) => (
 								<li key={section}>
 									<a
 										href={`#${section}`}
 										onClick={handleNavClick(section)}
-										className="hover:text-rose-500 text-[1.2rem] font-bold hover:ring-2 ring-rose-500 px-8 py-4 rounded-md"
+										className="hover:text-rose-500 text-[1.2rem] font-bold hover:ring-2 ring-rose-500 px-4 py-4 rounded-md"
 									>
 										{section.charAt(0).toUpperCase() + section.slice(1)}
 									</a>
@@ -89,7 +78,7 @@ export default function Home() {
 									key={section}
 									href={`#${section}`}
 									onClick={handleNavClick(section)}
-									className="text-[1.5rem] font-bold px-4 text-center py-2 rounded-md hover:bg-rose-500 hover:text-white"
+									className="text-[1.5rem] font-bold px-4 text-center py-2 rounded-md hover:bg-rose-500 hover:text-white animate__animated animate__fadeInRight"
 								>
 									{section.charAt(0).toUpperCase() + section.slice(1)}
 								</a>
@@ -97,7 +86,7 @@ export default function Home() {
 						)}
 						<button
 							onClick={() => setMenuOpen(!menuOpen)}
-							className="mt-auto bg-gray-200 text-gray-800 py-2 px-8 rounded-sm hover:bg-gray-400 uppercase font-bold shadow-lg"
+							className="mt-auto bg-rose-500 text-white py-2 px-8 rounded-sm hover:bg-rose-700 uppercase font-bold shadow-lg animate__animated animate__fadeInRight"
 						>
 							Cerrar
 						</button>
@@ -113,12 +102,12 @@ export default function Home() {
 					backgroundPosition: "left",
 				}}
 			>
-				<div className="w-full flex justify-center items-center p-8">
-					<div className=" w-[80%] hidden md:flex flex-col gap-2">
-						<h1 className="text-5xl font-extrabold animate__animated animate__fadeInUp">Tu aliado logístico</h1>
-						<h1 className="text-5xl font-extrabold animate__animated animate__fadeInRight">de <span className="text-rose-500">transporte confiable</span> </h1>
-						<h1 className="text-5xl font-extrabold animate__animated animate__fadeInLeft">en todo México</h1>
-						<h1 className="mt-6 text-[1.1rem] animate__animated animate__fadeIn">En <span className="text-rose-500 font-extrabold animate__animated animate__fadeIn">Transportes Danfer</span>, conectamos cada rincón de México con soluciones de transporte confiables y a la medida de tus necesidades. Contamos con servicio público federal, así como servicio exprés local y foráneo a nivel nacional, garantizando seguridad, calidad y puntualidad en cada envío. Nuestra cobertura nacional, junto con una atención personalizada y un compromiso absoluto con la eficiencia, nos permite ser tu aliado estratégico en logística y transporte. Tu carga siempre llegará a tiempo, sin importar el destino.</h1>
+				<div className="w-full flex justify-center items-center">
+					<div className=" w-full hidden md:flex flex-col gap-2 p-2 md:py-8 md:px-14">
+						<h1 className="text-5xl font-extrabold italic animate__animated animate__fadeInUp">Tu aliado logístico</h1>
+						<h1 className="text-5xl font-extrabold italic animate__animated animate__fadeInRight">de <span className="text-rose-500">transporte confiable</span> </h1>
+						<h1 className="text-5xl font-extrabold italic animate__animated animate__fadeInLeft">en todo México</h1>
+						<h1 className="mt-6 text-[1.1rem] animate__animated animate__fadeIn">En <span className="text-rose-500 font-extrabold animate__animated animate__fadeIn fontro">Transportes Danfer</span>, conectamos cada rincón de México con soluciones de transporte confiables y a la medida de tus necesidades. Contamos con servicio público federal, así como servicio exprés local y foráneo a nivel nacional, garantizando seguridad, calidad y puntualidad en cada envío. Nuestra cobertura nacional, junto con una atención personalizada y un compromiso absoluto con la eficiencia, nos permite ser tu aliado estratégico en logística y transporte. Tu carga siempre llegará a tiempo, sin importar el destino.</h1>
 						<div className="mt-6 animate__animated animate__fadeInUp">
 							<button
 								className="bg-rose-500 text-white py-2 px-8 rounded-full hover:bg-rose-800 uppercase font-bold"
@@ -127,11 +116,20 @@ export default function Home() {
 						</div>
 					</div>
 					<div className="w-[90%] flex md:hidden flex-col gap-2">
-						<div className="flex justify-end mb-[50px]">
+						<div className="flex justify-end mb-[50px] mt-4">
 							<button
 								onClick={() => setMenuOpen(!menuOpen)}
-								className="bg-rose-500 text-white py-2 px-8 rounded-sm hover:bg-rose-800 uppercase font-bold shadow-lg"
-							>menu</button>
+								className="bg-rose-500 text-white py-2 px-4 rounded-sm hover:bg-rose-800 uppercase font-bold shadow-lg transition-all"
+							>
+								<Image
+									src="/img/menu-icon.png"
+									alt="Danfer"
+									width={300}
+									height={200}
+									objectFit="cover"
+									className="w-[25px] h-auto"
+								/>
+							</button>
 						</div>
 						<div className="flex justify-center items-center">
 							<Image
@@ -143,8 +141,8 @@ export default function Home() {
 								className="w-[400px] h-auto mb-[100px]"
 							/>
 						</div>
-						<h1 className="text-[1.5rem] font-extrabold text-center animate__animated animate__fadeIn">Tu aliado logístico <span className="text-rose-500 animate__animated animate__fadeIn">transporte confiable</span> en todo México </h1>
-						<h1 className="mt-6 text-center text-[1rem] animate__animated animate__fadeIn">En <span className="text-rose-500 font-extrabold">Transportes Danfer</span>, conectamos cada rincón de México con soluciones de transporte confiables y a la medida de tus necesidades. Contamos con servicio público federal, así como servicio exprés local y foráneo a nivel nacional, garantizando seguridad, calidad y puntualidad en cada envío. Nuestra cobertura nacional, junto con una atención personalizada y un compromiso absoluto con la eficiencia, nos permite ser tu aliado estratégico en logística y transporte. Tu carga siempre llegará a tiempo, sin importar el destino.</h1>
+						<h1 className="text-[1.5rem] font-extrabold text-center animate__animated animate__fadeIn italic">Tu aliado logístico <span className="text-rose-500 animate__animated animate__fadeIn">transporte confiable</span> en todo México </h1>
+						<h1 className="mt-6 text-center text-[1rem] animate__animated animate__fadeIn italic">En <span className="text-rose-500 font-extrabold">Transportes Danfer</span>, conectamos cada rincón de México con soluciones de transporte confiables y a la medida de tus necesidades. Contamos con servicio público federal, así como servicio exprés local y foráneo a nivel nacional, garantizando seguridad, calidad y puntualidad en cada envío. Nuestra cobertura nacional, junto con una atención personalizada y un compromiso absoluto con la eficiencia, nos permite ser tu aliado estratégico en logística y transporte. Tu carga siempre llegará a tiempo, sin importar el destino.</h1>
 						<div className="mt-6 flex justify-center items-center animate__animated animate__fadeInUp">
 							<button
 								className="bg-rose-500 text-white py-2 px-8 rounded-full hover:bg-rose-800 uppercase font-bold shadow-lg"
@@ -153,19 +151,18 @@ export default function Home() {
 						</div>
 					</div>
 				</div>
-				<div className="w-full hidden md:flex flex-row pt-[100px]">
-					<div className="w-full flex flex-col justify-center items-center gap-4 mt-12">
-
+				<div className="hidden w-full md:flex flex-row pt-[100px]">
+					<div className="w-full flex flex-col justify-center items-center mt-10 px-10">
 						<Image
 							src="/img/banner-2.png"
 							alt="Danfer"
 							width={300}
 							height={200}
 							objectFit="cover"
-							className="rounded-lg mb-4 shadow-lg shadow-rose-500 w-[400px] h-[600px] ring-4 ring-rose-500 animate__animated animate__fadeInLeft"
+							className="rounded-lg mb-4 shadow-lg shadow-rose-500 w-[350px] h-auto ring-4 ring-rose-500 animate__animated animate__fadeInLeft"
 						/>
 					</div>
-					<div className="w-full flex flex-col justify-center items-center gap-12 mt-12">
+					<div className="w-full flex flex-col justify-center items-center gap-12 mt-12 px-10">
 						<Image
 							src="/img/banner-1.png"
 							alt="Danfer"
@@ -191,63 +188,63 @@ export default function Home() {
 				{/* Servicios */}
 				<section id="servicios" className="flex flex-col w-[90%] mx-auto my-10">
 					<div className="">
-						<h1 className="text-[2.5rem] font-bold mb-4">Servicios</h1>
+						<h1 className="text-[2.5rem] font-bold mb-4 inline border-b-6 border-rose-500 italic">Servicios</h1>
 					</div>
-					<div className="w-full grid grid-cols-1 md:grid-cols-4 gap-4">
-						<div className="w-full flex flex-col justify-center items-center py-12">
+					<div className="w-full grid grid-cols-1 md:grid-cols-4 gap-8">
+						<div className="w-full flex flex-col justify-start items-center py-12">
 							<Image
 								src="/img/servicios-1.png"
 								alt="Danfer"
 								width={300}
 								height={200}
 								objectFit="cover"
-								className="rounded-lg mb-4 shadow-lg w-auto h-auto animate__animated animate__fadeIn"
+								className="rounded-lg mb-4 shadow-lg w-auto h-[400px] animate__animated animate__fadeIn"
 							/>
 							<div className="flex flex-col w-full justify-center items-center">
-								<h3 className="text-2xl font-bold mt-4 text-center">Envíos exprés</h3>
-								<h4 className="text-xl mt-2 text-center">Entregas rápidas y seguras que llegan justo cuando las necesitas.</h4>
+								<h3 className="text-[1.3rem] font-bold mt-4 text-center">Envíos exprés</h3>
+								<h4 className="text-[1.1rem] mt-2 text-center">Entregas rápidas y seguras que llegan justo cuando las necesitas.</h4>
 							</div>
 						</div>
-						<div className="w-full flex flex-col justify-center items-center py-12">
+						<div className="w-full flex flex-col justify-start items-center py-12">
 							<Image
 								src="/img/servicios-2.png"
 								alt="Danfer"
 								width={300}
 								height={200}
 								objectFit="cover"
-								className="rounded-lg mb-4 shadow-lg w-auto h-auto animate__animated animate__fadeIn"
+								className="rounded-lg mb-4 shadow-lg w-auto h-[400px]  animate__animated animate__fadeIn"
 							/>
 							<div className="flex flex-col w-full justify-center items-center">
-								<h3 className="text-2xl font-bold mt-4 text-center">Servicios de paquetería pesada</h3>
-								<h4 className="text-xl mt-2 text-center">Transporte confiable para cargas voluminosas y pesadas en todo México.</h4>
+								<h3 className="text-[1.3rem] font-bold mt-4 text-center">Servicios de paquetería pesada</h3>
+								<h4 className="text-[1.1rem] mt-2 text-center">Transporte confiable para cargas voluminosas y pesadas en todo México.</h4>
 							</div>
 						</div>
-						<div className="w-full flex flex-col justify-center items-center py-12">
+						<div className="w-full flex flex-col justify-start items-center py-12">
 							<Image
 								src="/img/servicios-3.png"
 								alt="Danfer"
 								width={300}
 								height={200}
 								objectFit="cover"
-								className="rounded-lg mb-4 shadow-lg w-auto h-auto animate__animated animate__fadeIn"
+								className="rounded-lg mb-4 shadow-lg w-auto h-[400px]  animate__animated animate__fadeIn"
 							/>
 							<div className="flex flex-col w-full justify-center items-center">
-								<h3 className="text-2xl font-bold mt-4 text-center">Rastreo en tiempo real</h3>
-								<h4 className="text-xl mt-2 text-center">Monitorea tu envío en cada etapa con total transparencia y seguridad.</h4>
+								<h3 className="text-[1.3rem] font-bold mt-4 text-center">Rastreo en tiempo real</h3>
+								<h4 className="text-[1.1rem] mt-2 text-center">Monitorea tu envío en cada etapa con total transparencia y seguridad.</h4>
 							</div>
 						</div>
-						<div className="w-full flex flex-col justify-center items-center py-12">
+						<div className="w-full flex flex-col justify-start items-center py-12">
 							<Image
 								src="/img/servicios-4.png"
 								alt="Danfer"
 								width={300}
 								height={200}
 								objectFit="cover"
-								className="rounded-lg mb-4 shadow-lg w-auto h-auto animate__animated animate__fadeIn"
+								className="rounded-lg mb-4 shadow-lg w-auto h-[400px]  animate__animated animate__fadeIn"
 							/>
 							<div className="flex flex-col w-full justify-center items-center">
-								<h3 className="text-2xl font-bold mt-4 text-center">Recolección en múltiples puntos</h3>
-								<h4 className="text-xl mt-2 text-center">Flexibilidad para recoger tu mercancía en diferentes ubicaciones sin complicaciones.</h4>
+								<h3 className="text-[1.3rem] font-bold mt-4 text-center">Recolección en múltiples puntos</h3>
+								<h4 className="text-[1.1rem] mt-2 text-center">Flexibilidad para recoger tu mercancía en diferentes ubicaciones sin complicaciones.</h4>
 							</div>
 						</div>
 					</div>
@@ -256,7 +253,7 @@ export default function Home() {
 				{/* Beneficios movil  */}
 				<section id='beneficios-movil' className="flex md:hidden flex-col w-[90%] mx-auto my-10">
 					<div className="">
-						<h1 className="text-[2.5rem] font-bold mb-4">Beneficios</h1>
+						<h1 className="text-[2.5rem] font-bold mb-4 inline border-b-6 border-rose-500 italic">Beneficios</h1>
 					</div>
 
 					<div className="w-full flex justify-center items-center">
@@ -350,7 +347,7 @@ export default function Home() {
 				{/* Beneficios web  */}
 				<section id='beneficios' className="hidden md:flex flex-col w-full md:w-[90%] mx-auto my-10">
 					<div className="">
-						<h1 className="text-[2.5rem] font-bold mb-4">Beneficios</h1>
+						<h1 className="text-[2.5rem] font-bold mb-4 inline border-b-6 border-rose-500 italic">Beneficios</h1>
 					</div>
 
 					<div className="w-full h-[900px] flex justify-center items-center">
@@ -451,10 +448,10 @@ export default function Home() {
 				{/* Nosotros */}
 				<section id="nosotros" className="flex flex-col md:flex-row w-[90%] mx-auto gap-8 md:gap-4 my-10 p-10">
 					<div className="w-full md:w-[65%]">
-						<h1 className="text-[2.5rem] font-bold mb-4">Nosotros</h1>
-						<div className="w-full md:w-[80%]">
-							<h4 className="text-[1.4rem] text-gray-900 mb-2 font-bold text-center md:text-start">En <span className="text-rose-500">Transporte Danfer</span>, no solo movemos mercancías, llevamos seguridad y confianza en cada trayecto.</h4>
-							<p className="text-[1.1rem] text-gray-700">
+						<h1 className="text-[2.5rem] font-bold inline border-b-6 border-rose-500 italic">Nosotros</h1>
+						<div className="w-full md:w-[90%] mt-10 text-center md:text-start ">
+							<h4 className="text-[1.4rem] text-gray-900 mb-2 font-bold italic">En <span className="text-rose-500">Transporte Danfer</span>, no solo movemos mercancías, llevamos seguridad y confianza en cada trayecto.</h4>
+							<p className="text-[1.1rem] text-gray-700 mt-6">
 								Nuestra historia nace de una pasión genuina por la logística. Desde el inicio entendimos que no se trata solo de mover mercancías, sino de ofrecer soluciones confiables, seguras y puntuales en cada operación.
 								Nuestra misión es brindar cobertura logística a nivel nacional con altos estándares de calidad, actuando siempre con honradez, compromiso y confianza para convertirnos en la mejor opción de nuestros clientes en el manejo de sus bienes.
 							</p>
@@ -481,11 +478,11 @@ export default function Home() {
 
 
 				{/* Operacion */}
-				<section id="operacion" className="flex flex-col w-[90%] mx-auto my-10">
+				<section id="operacion" className="flex flex-col w-[90%] mx-auto my-14">
 					<div className="text-center">
-						<h1 className="text-[2.5rem] font-bold mb-6">Operación</h1>
-						<h2 className="text-[1.2rem] font-bold text-center">Nuestro equipo gestiona cada operación con excelencia, asegurando envíos confiables y atención personalizada al cliente</h2>
-						<h2 className="text-[1.1rem] font-bold text-center mt-2">Logística confiable y eficiente que asegura cada entrega puntual</h2>
+						<h1 className="text-[2.5rem] font-bold inline border-b-6 border-rose-500 italic">Operación</h1>
+						<h2 className="text-[1.2rem] font-bold italic text-center mt-10">Nuestro equipo gestiona cada operación con excelencia, asegurando envíos confiables y atención personalizada al cliente</h2>
+						<h2 className="text-[1.1rem] font-bold italic text-center mt-2">Logística confiable y eficiente que asegura cada entrega puntual</h2>
 					</div>
 
 					<div className="w-full grid grid-cols-1 md:grid-cols-3 gap-4 py-20 px-8">
@@ -546,10 +543,10 @@ export default function Home() {
 
 				<section id="cobertura" className="flex flex-col md:flex-row w-[90%] mx-auto gap-8 md:gap-4 my-10 p-10">
 					<div className="w-full md:w-[65%]">
-						<h1 className="text-[2.5rem] font-bold mb-4">Cobertura</h1>
-						<div className="w-full md:w-[80%]">
-							<h4 className="text-[1.4rem] text-gray-900 mb-2 font-bold text-center md:text-start">Cobertura nacional para el transporte confiable de todo tipo de mercancías</h4>
-							<p className="text-[1.1rem] text-gray-700">
+						<h1 className="text-[2.5rem] font-bold inline border-b-6 border-rose-500 italic">Cobertura</h1>
+						<div className="w-full md:w-[80%] mt-10 text-center md:text-start ">
+							<h4 className="text-[1.4rem] text-gray-900 mb-2 font-bold italic">Cobertura nacional para el transporte confiable de todo tipo de mercancías</h4>
+							<p className="text-[1.1rem] text-gray-700 mt-6">
 								Contamos con un completo parque vehicular, incluyendo unidades de 1, 1.5 y 3.5 toneladas, así como tipo van y camionetas de 3.5 toneladas, adaptadas a diversas necesidades logísticas. Cada vehículo está diseñado para garantizar eficiencia, seguridad y puntualidad en cada entrega, sin importar la distancia.
 							</p>
 							<p className="text-[1.1rem] text-gray-700 mt-4">
@@ -576,8 +573,8 @@ export default function Home() {
 				{/* Banner de contacto */}
 				<section id="contacto" className="flex flex-col w-full mx-auto py-[150px] bg-gray-950 p-4">
 					<div className="text-center text-white">
-						<h2 className="text-[2.5rem] font-bold">Conoce nuestro servicio de transporte</h2>
-						<h2 className="text-[1.5rem] md:text-[2rem] font-bold">mercancias y productos</h2>
+						<h2 className="text-[2.5rem] font-bold italic">Conoce nuestro servicio de transporte</h2>
+						<h2 className="text-[1.5rem] md:text-[2rem] font-semibold italic">mercancias y productos</h2>
 					</div>
 					<div className="flex flex-col justify-center items-center md:flex-row md:items-center md:justify-center gap-4 mt-12">
 						<input
@@ -588,7 +585,7 @@ export default function Home() {
 						<button className="bg-rose-500 text-white py-2 px-8 rounded-full hover:bg-rose-800 uppercase font-bold">contacto</button>
 					</div>
 					<div className="w-[80%] mx-auto text-center text-white mt-12">
-						<h3 className="text-[1.3rem] font-bold">Estamos listos para contactarte y proporcionarte toda la información que necesitas sobre nuestros servicios.</h3>
+						<h3 className="text-[1.3rem] font-bold italic">Estamos listos para contactarte y proporcionarte toda la información que necesitas sobre nuestros servicios.</h3>
 					</div>
 
 				</section>
@@ -702,7 +699,7 @@ export default function Home() {
 					</div>
 				</div>
 				<div className="flex flex-col w-full mx-auto bg-gray-950 py-6">
-					<p className="text-md text-center text-white">
+					<p className="text-[.9rem] text-center text-white">
 						&copy; 2025 Transportes Danfer. Todos los derechos reservados.
 					</p>
 				</div>
