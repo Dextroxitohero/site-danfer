@@ -89,7 +89,7 @@ export default function Home() {
 				)}
 			</nav>
 			<header
-				className="w-full flex md:h-[900px]  md:mt-[100px] md:bg-[url('/img/banner-wall-1.jpg')] bg-cover bg-center"
+				className="w-full flex md:h-[1000px]  md:mt-[100px] md:bg-[url('/img/banner-wall-3.png')] bg-cover bg-center"
 				id="inicio"
 			// style={{
 			// 	backgroundImage: "url('/img/banner-wall-1.jpg')",
@@ -98,11 +98,11 @@ export default function Home() {
 			// }}
 			>
 				<div className="w-full flex justify-start items-start">
-					<div className=" w-[60%] hidden md:flex flex-col gap-2 p-2 md:py-8 md:px-14 text-white mt-[100px]">
+					<div className=" w-[60%] hidden md:flex flex-col gap-2 p-2 md:py-8 md:px-14 text-white mt-[70px]">
 						<h1 className="text-5xl font-extrabold italic animate__animated animate__fadeInUp text-shadow-lg">Tu aliado logístico</h1>
 						<h1 className="text-5xl font-extrabold italic animate__animated animate__fadeInRight text-shadow-lg">de <span className="text-sky-700">transporte confiable</span> </h1>
 						<h1 className="text-5xl font-extrabold italic animate__animated animate__fadeInLeft">en todo México</h1>
-						<h1 className="mt-10 text-[1.8rem] font-semibold animate__animated animate__fadeIn">En <span className="text-sky-700 font-extrabold italic animate__animated animate__fadeIn fontro">Transportes Danfer</span>, conectamos cada rincón de México con soluciones de transporte confiables y a la medida de tus necesidades. Contamos con servicio público federal, así como servicio exprés local y foráneo a nivel nacional, garantizando seguridad, calidad y puntualidad en cada envío. </h1>
+						<h1 className="mt-10 text-[2rem] font-semibold animate__animated animate__fadeIn">En <span className="text-sky-700 font-extrabold italic animate__animated animate__fadeIn fontro">Transportes Danfer</span>, conectamos cada rincón de México con soluciones de transporte confiables y a la medida de tus necesidades. Contamos con servicio público federal, así como servicio exprés local y foráneo a nivel nacional, garantizando seguridad, calidad y puntualidad en cada envío. </h1>
 						<div className="mt-14 animate__animated animate__fadeInUp">
 							<button
 								className="bg-green-500 text-white py-2 px-8 rounded-full hover:bg-green-700 uppercase font-bold"
@@ -547,7 +547,7 @@ export default function Home() {
 						<input
 							type="text"
 							placeholder="Escribe tu correo electrónico"
-							className="border border-gray-300 py-2 px-4 w-[350px] rounded-full text-white *:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-rose-500"
+							className="border border-gray-300 py-2 px-4 w-[350px] rounded-full text-white *:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-sky-700"
 						/>
 						<button className="bg-sky-700 text-white py-2 px-8 rounded-full hover:bg-sky-700 uppercase font-bold">contacto</button>
 					</div>
@@ -572,9 +572,9 @@ export default function Home() {
 							/>
 						</div>
 						<div className="w-full flex flex-col justify-start items-start p-6">
-							<h4 className="text-gray-950 font-bold">Siguenos en</h4>
+							<h4 className="text-gray-950 font-bold">Escríbenos en</h4>
 
-							<div className="flex flex-row justify-center items-center gap-2 mt-4 pl-4">
+							{/* <div className="flex flex-row justify-center items-center gap-2 mt-4 pl-4">
 								<Image
 									src="/img/facebook.png"
 									alt="Danfer"
@@ -584,7 +584,7 @@ export default function Home() {
 									className="w-7 h-7"
 								/>
 								<a className="text-gray-950 font-bold text-lg">Facebook</a>
-							</div>
+							</div> */}
 							<div className="flex flex-row justify-center items-center gap-2 mt-4 pl-4">
 								<Image
 									src="/img/whatsapp.png"
@@ -600,7 +600,7 @@ export default function Home() {
 									rel="noopener noreferrer"
 									className="text-gray-950 font-bold text-lg"
 								>
-									Escríbenos por WhatsApp
+									WhatsApp
 								</a>
 
 								{/* <p className="text-gray-950 font-bold text-lg">Whats App</p> */}
@@ -630,7 +630,7 @@ export default function Home() {
 									objectFit="cover"
 									className="w-7 h-7"
 								/>
-								<p className="text-gray-950 font-bold text-lg">4448051867</p>
+								<p className="text-gray-950 font-bold text-lg">444 805 1867</p>
 							</div>
 							{/* <div className="flex flex-row justify-center items-center gap-2 mt-4 pl-4">
 								<Image
