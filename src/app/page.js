@@ -167,7 +167,7 @@ export default function Home() {
 							/>
 							<div className="flex flex-col w-full justify-center items-center">
 								<h3 className="text-[1.3rem] font-bold mt-4 text-center">Envíos exprés</h3>
-								<h4 className="text-[1.1rem] mt-2 text-center">Porque tu tiempo vale: entregas rapidas, seguras y siempre puntuales.</h4>
+								<h4 className="text-[1.1rem] mt-2 text-center">Porque tu tiempo vale: entregas rapidas, seguras y siempre puntuales</h4>
 							</div>
 						</div>
 						<div className="w-full flex flex-col justify-start items-center py-12">
@@ -181,7 +181,7 @@ export default function Home() {
 							/>
 							<div className="flex flex-col w-full justify-center items-center">
 								<h3 className="text-[1.3rem] font-bold mt-4 text-center">Servicios de paquetería pesada</h3>
-								<h4 className="text-[1.1rem] mt-2 text-center">Movemos lo otros no pueden para todo el pais.</h4>
+								<h4 className="text-[1.1rem] mt-2 text-center">Movemos lo que otros no pueden para todo el pais</h4>
 							</div>
 						</div>
 						<div className="w-full flex flex-col justify-start items-center py-12">
@@ -195,7 +195,7 @@ export default function Home() {
 							/>
 							<div className="flex flex-col w-full justify-center items-center">
 								<h3 className="text-[1.3rem] font-bold mt-4 text-center">Rastreo en tiempo real</h3>
-								<h4 className="text-[1.1rem] mt-2 text-center">Tu envio bajo control monitorea cada etapa con total transporencia y confianza.</h4>
+								<h4 className="text-[1.1rem] mt-2 text-center">Tu envio bajo control monitorea cada etapa con total transporencia y confianza</h4>
 							</div>
 						</div>
 						<div className="w-full flex flex-col justify-start items-center py-12">
@@ -209,7 +209,7 @@ export default function Home() {
 							/>
 							<div className="flex flex-col w-full justify-center items-center">
 								<h3 className="text-[1.3rem] font-bold mt-4 text-center">Recolección en múltiples puntos</h3>
-								<h4 className="text-[1.1rem] mt-2 text-center">Nos adaptamos a ti: recolectamos tu mercancia en diferentes ubicaciones con flexibilidad y eficiencia.</h4>
+								<h4 className="text-[1.1rem] mt-2 text-center">Nos adaptamos a ti: recolectamos tu mercancia en diferentes ubicaciones con flexibilidad y eficiencia</h4>
 							</div>
 						</div>
 					</div>
@@ -559,9 +559,9 @@ export default function Home() {
 
 			</main>
 			<footer>
-				<div className="flex flex-col w-full mx-auto py-[50px]">
+				<div className="flex flex-col w-[95%] md:w-[90%] mx-auto py-[50px]">
 					<div className="w-full grid grid-cols-1 md:grid-cols-4 gap-4 p-4">
-						<div className="w-full hidden md:flex flex-col justify-center items-center p-6">
+						<div className="w-full hidden md:flex flex-col justify-center items-center md:p-6">
 							<Image
 								src="/img/logo-union.png"
 								alt="Danfer"
@@ -571,7 +571,7 @@ export default function Home() {
 								className="w-[250px] h-auto"
 							/>
 						</div>
-						<div className="w-full flex flex-col justify-start items-start p-6">
+						<div className="w-full flex flex-col justify-start items-start md:p-6">
 							<h4 className="text-gray-950 font-bold">Escríbenos en</h4>
 
 							{/* <div className="flex flex-row justify-center items-center gap-2 mt-4 pl-4">
@@ -618,7 +618,7 @@ export default function Home() {
 							</div> */}
 
 						</div>
-						<div className="w-full flex flex-col justify-start items-start p-6">
+						<div className="w-full flex flex-col justify-start items-start md:p-6">
 							<h4 className="text-gray-950 font-bold">Contactanos</h4>
 
 							<div className="flex flex-row justify-center items-center gap-2 mt-4 pl-4">
@@ -645,7 +645,7 @@ export default function Home() {
 							</div> */}
 						</div>
 
-						<div className="w-full flex flex-col justify-start items-start p-6">
+						<div className="w-full flex flex-col justify-start items-start md:p-6">
 							<h4 className="text-gray-950 font-bold">Via correo electrónico</h4>
 
 							{/* <div className="flex flex-row justify-center items-center gap-2 mt-4 pl-4">
@@ -673,7 +673,7 @@ export default function Home() {
 									objectFit="cover"
 									className="w-7 h-7"
 								/>
-								<p className="text-gray-950 font-bold text-lg">contacto@danfer.com</p>
+								<p className="text-gray-950 font-bold text-lg">logistica@transportesdanfer.com</p>
 							</div>
 						</div>
 
